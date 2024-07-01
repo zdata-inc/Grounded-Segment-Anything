@@ -23,7 +23,7 @@ setup(
     url = URL,
     license = LICENSE,
     python_requires = PYTHON_VERSION,
-    packages=find_packages(include=['segment_anything/segment_anything', 'GroundingDino/GroundingDino']),
+    packages=find_packages(include=['segment_anything/segment_anything.*', 'GroundingDino/GroundingDino.*']),
     install_requires = required_packages,
     classifiers = [
         'Development Status :: 4 - Production/Beta',
