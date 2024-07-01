@@ -23,8 +23,12 @@ setup(
     url = URL,
     license = LICENSE,
     python_requires = PYTHON_VERSION,
-    packages=find_packages(include=['segment_anything.segment_anything', 'segment_anything.segment_anything.*',
-                                    'GroundingDino.groundingdino', 'GroundingDino.groundingdino.*']),
+    packages=["segment_anything", "groundingdino"],
+    package_dir={
+        "": ".",
+        "segment_anything": "./segment_anything/segment_anything",
+        "groundingdino": "./GroundingDino/groundingdino",
+    },
     install_requires = required_packages,
     classifiers = [
         'Development Status :: 4 - Production/Beta',
